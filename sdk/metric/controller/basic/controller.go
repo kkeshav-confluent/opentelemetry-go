@@ -351,11 +351,11 @@ func (c *Controller) IsRunning() bool {
 // the last collection is aged less than the configured collection
 // period.
 func (c *Controller) Collect(ctx context.Context) error {
-	if c.IsRunning() {
-		// When there's a non-nil ticker, there's a goroutine
-		// computing checkpoints with the collection period.
-		return ErrControllerStarted
-	}
+	//if c.IsRunning() {
+	// When there's a non-nil ticker, there's a goroutine
+	// computing checkpoints with the collection period.
+	//	return ErrControllerStarted
+	//}
 	if !c.shouldCollect() {
 		return nil
 	}
